@@ -150,8 +150,13 @@
     <ClInclude Include="src\base\feature\option\implement\SliderOption.h" />
     <ClInclude Include="src\base\feature\option\implement\TextOption.h" />
     <ClInclude Include="src\base\feature\option\Option.h" />
+    <ClInclude Include="src\core\Common.h" />
     <ClInclude Include="src\core\Interfaces.h" />
+    <ClInclude Include="src\sdk\classvars\GlobalVars.h" />
+    <ClInclude Include="src\sdk\data\Vector.h" />
     <ClInclude Include="src\sdk\InterfaceReg.h" />
+    <ClInclude Include="src\sdk\interfaces\IBaseClientDLL.h" />
+    <ClInclude Include="src\sdk\Sdk.h" />
     <ClInclude Include="src\utils\AddressUtils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

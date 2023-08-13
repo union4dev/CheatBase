@@ -53,5 +53,20 @@
     <ClInclude Include="src\utils\AddressUtils.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\sdk\Sdk.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\Common.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\interfaces\IBaseClientDLL.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\data\Vector.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sdk\classvars\GlobalVars.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
