@@ -13,4 +13,6 @@ Interfaces: [Interfaces.cpp](https://github.com/union4dev/CheatBase/blob/master/
 
 Memory: [Memory.cpp](https://github.com/union4dev/CheatBase/blob/master/Base/src/core/Memory.cpp), [Memory.h](https://github.com/union4dev/CheatBase/blob/master/Base/src/core/Memory.h)
 
+Netvar: [Netvar.cpp](https://github.com/union4dev/CheatBase/blob/master/Base/src/core/Netvar.cpp), [Netvar.h](https://github.com/union4dev/CheatBase/blob/master/Base/src/core/Netvar.h)
+
 ...
