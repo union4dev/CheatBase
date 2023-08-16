@@ -11,4 +11,6 @@ Entry-point: [DllMain.cpp](https://github.com/union4dev/CheatBase/blob/master/Ba
 
 Interfaces: [Interfaces.cpp](https://github.com/union4dev/CheatBase/blob/master/Base/src/core/Interfaces.cpp), [Interfaces.h](https://github.com/union4dev/CheatBase/blob/master/Base/src/core/Interfaces.h)
 
+Memory: [Memory.cpp](https://github.com/union4dev/CheatBase/blob/master/Base/src/core/Memory.cpp), [Memory.h](https://github.com/union4dev/CheatBase/blob/master/Base/src/core/Memory.h)
+
 ...
