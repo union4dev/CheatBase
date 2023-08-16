@@ -247,3 +247,68 @@ private:
 	// No copy constructors allowed
 	Trace(const Trace& other);
 };
+
+class TraceListData
+{
+public:
+	virtual ~TraceListData() {}
+
+	virtual void Reset() = 0;
+	virtual bool IsEmpty() = 0;
+	// CanTraceRay will return true if the current volume encloses the ray
+	// NOTE: The leaflist trace will NOT check this.  Traces are intersected
+	// against the culled volume exclusively.
+	virtual bool CanTraceRay(const Ray& ray) = 0;
+};
+
+class BrushQuery
+{
+public:
+	BrushQuery(void)
+	{
+		m_iCount = 0;
+		m_pBrushes = NULL;
+		m_iMaxBrushSides = 0;
+		m_pReleaseFunc = NULL;
+		m_pData = NULL;
+	}
+	~BrushQuery(void)
+	{
+		ReleasePrivateData();
+	}
+	void ReleasePrivateData(void)
+	{
+		if (m_pReleaseFunc)
+		{
+			m_pReleaseFunc(this);
+		}
+
+		m_iCount = 0;
+		m_pBrushes = NULL;
+		m_iMaxBrushSides = 0;
+		m_pReleaseFunc = NULL;
+		m_pData = NULL;
+	}
+
+	inline int Count(void) const { return m_iCount; }
+	inline uint32_t* Base(void) { return m_pBrushes; }
+	inline uint32_t operator[](int iIndex) const { return m_pBrushes[iIndex]; }
+	inline uint32_t GetBrushNumber(int iIndex) const { return m_pBrushes[iIndex]; }
+
+	//maximum number of sides of any 1 brush in the query results
+	inline int MaxBrushSides(void) const { return m_iMaxBrushSides; }
+
+protected:
+	int m_iCount;
+	uint32_t* m_pBrushes;
+	int m_iMaxBrushSides;
+	void (*m_pReleaseFunc)(BrushQuery*); //release function is almost always in a different dll than calling code
+	void* m_pData;
+};
+
+class EntityEnumerator
+{
+public:
+	// This gets called with each handle
+	virtual bool EnumEntity(HandleEntity* handleEntity) = 0;
+};
