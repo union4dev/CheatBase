@@ -2,6 +2,7 @@
 #include <thread>
 
 #include "core/Interfaces.h"
+#include "core/Memory.h"
 
 DWORD WINAPI CheatMain(LPVOID hinstDLL) // Cheat thread
 {
@@ -15,7 +16,9 @@ DWORD WINAPI CheatMain(LPVOID hinstDLL) // Cheat thread
 
 	try
 	{
-		interfaces->Initialize();
+		interfaces = std::make_unique<const Interfaces>();
+		memory = std::make_unique<const Memory>();
+		netvar = std::make_unique<Netvar>();
 	}
 	catch (const std::exception& e)
 	{

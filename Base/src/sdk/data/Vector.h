@@ -153,6 +153,26 @@ public:
 
 	constexpr Vector(const Vector& vec, float z = 0.f) : x(vec.x), y(vec.y), z(z) { }
 
+	float* data()
+	{
+		return reinterpret_cast<float*>(this);
+	}
+
+	const float* data() const
+	{
+		return reinterpret_cast<float*>(const_cast<Vector*>(this));
+	}
+
+	float& operator[](const std::size_t i)
+	{
+		return this->data()[i];
+	}
+
+	const float& operator[](const std::size_t i) const
+	{
+		return this->data()[i];
+	}
+
 	bool operator==(const Vector& vec)
 	{
 		return this->IsEqual(vec);
@@ -285,6 +305,16 @@ public:
 	float length2D() const noexcept
 	{
 		return std::sqrt(x * x + y * y);
+	}
+
+	constexpr float LengthSqr() const
+	{
+		return DotProduct(*this);
+	}
+
+	constexpr float DotProduct(const Vector& dot) const
+	{
+		return (this->x * dot.x + this->y * dot.y + this->z * dot.z);
 	}
 
 	constexpr float squareLength() const noexcept

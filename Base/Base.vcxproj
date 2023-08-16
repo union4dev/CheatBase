@@ -140,7 +140,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\core\Interfaces.cpp" />
+    <ClCompile Include="src\core\Memory.cpp" />
+    <ClCompile Include="src\core\Netvar.cpp" />
     <ClCompile Include="src\DllMain.cpp" />
+    <ClCompile Include="src\sdk\entity\Entity.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\base\feature\Feature.h" />
@@ -152,9 +155,27 @@
     <ClInclude Include="src\base\feature\option\Option.h" />
     <ClInclude Include="src\core\Common.h" />
     <ClInclude Include="src\core\Interfaces.h" />
+    <ClInclude Include="src\core\Memory.h" />
+    <ClInclude Include="src\core\Netvar.h" />
+    <ClInclude Include="src\sdk\classvars\ClientClass.h" />
     <ClInclude Include="src\sdk\classvars\GlobalVars.h" />
+    <ClInclude Include="src\sdk\classvars\SoundInfo.h" />
+    <ClInclude Include="src\sdk\data\DataTable.h" />
+    <ClInclude Include="src\sdk\data\Fnv.h" />
+    <ClInclude Include="src\sdk\data\Matrix.h" />
+    <ClInclude Include="src\sdk\data\UtlVector.h" />
     <ClInclude Include="src\sdk\data\Vector.h" />
+    <ClInclude Include="src\sdk\entity\ClientAlphaProperty.h" />
+    <ClInclude Include="src\sdk\entity\ClientEntity.h" />
+    <ClInclude Include="src\sdk\entity\ClientNetworkable.h" />
+    <ClInclude Include="src\sdk\entity\ClientRenderable.h" />
+    <ClInclude Include="src\sdk\entity\ClientThinkable.h" />
+    <ClInclude Include="src\sdk\entity\ClientUnknown.h" />
+    <ClInclude Include="src\sdk\entity\Collideable.h" />
+    <ClInclude Include="src\sdk\entity\Entity.h" />
+    <ClInclude Include="src\sdk\entity\HandleEntity.h" />
     <ClInclude Include="src\sdk\InterfaceReg.h" />
+    <ClInclude Include="src\sdk\interfaces\EngineTrace.h" />
     <ClInclude Include="src\sdk\interfaces\IBaseClientDLL.h" />
     <ClInclude Include="src\sdk\Sdk.h" />
     <ClInclude Include="src\utils\AddressUtils.h" />

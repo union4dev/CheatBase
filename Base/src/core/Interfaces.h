@@ -1,12 +1,17 @@
 #pragma once
-#include <memory>
+#include "../sdk/Sdk.h"
 
 class Interfaces
 {
 public:
-	void Initialize();
+	Interfaces()
+	{
+		this->Initialize();
+	}
 
-
+	IBaseClientDLL* client = nullptr;
+private:
+	void Initialize() noexcept;
 };
 
-inline std::unique_ptr<Interfaces> interfaces;
+inline std::unique_ptr<const Interfaces> interfaces;

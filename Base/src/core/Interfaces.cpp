@@ -54,7 +54,7 @@ static T* GetInterface(const char* module, const std::string_view name)
 	throw std::runtime_error(std::format("Failed to find {} in {}", name, module));
 }
 
-void Interfaces::Initialize()
+void Interfaces::Initialize() noexcept
 {
-
+	client = GetInterface<IBaseClientDLL>("client", "VClient");
 }
