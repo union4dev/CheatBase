@@ -18,7 +18,6 @@ DWORD WINAPI CheatMain(LPVOID hinstDLL) // Cheat thread
 	{
 		interfaces = std::make_unique<const Interfaces>();
 		memory = std::make_unique<const Memory>();
-		netvar = std::make_unique<Netvar>();
 	}
 	catch (const std::exception& e)
 	{

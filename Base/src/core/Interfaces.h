@@ -4,10 +4,7 @@
 class Interfaces
 {
 public:
-	Interfaces()
-	{
-		this->Initialize();
-	}
+	Interfaces() noexcept;
 
 	IBaseClientDLL* client = nullptr;
 private:

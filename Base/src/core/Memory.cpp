@@ -5,6 +5,11 @@
 #include <vector>
 #include <stdexcept>
 
+Memory::Memory()
+{
+    this->Initialize();
+}
+
 void Memory::Initialize()
 {
     present = reinterpret_cast<uintptr_t>(Scan("gameoverlayrenderer", "FF 15 ? ? ? ? 8B F0 85 FF") + 2);
